@@ -28,4 +28,5 @@ def find_first_number(str):
             return l, str.find(l)
     return None, None
 
-main()
+if __name__ == "__main__":
+    main()
