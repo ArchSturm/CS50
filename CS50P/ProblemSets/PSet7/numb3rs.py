@@ -7,19 +7,19 @@ def validate(ip):
     try:
         ip = ip.strip().split(".")
     except ValueError:
-        return "False"
+        return False
     if len(ip) != 4:
-        return "False"
+        return False
     for i in ip:
         try:
             i = int(i)
         except ValueError:
-            return "False"
+            return False
         if i < 0 or i > 255:
-            return "False"
+            return False
         else:
             continue
-    return "True"
+    return True
 
 
 if __name__ == "__main__":

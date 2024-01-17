@@ -15,7 +15,7 @@ def convert(s):
 
 
 def conv_parts(part, am, pm):
-    if matches := re.search(r"(\d{1,2})(:\d{2})? (A|P)M", part):
+    if matches := re.search(r"^(\d{1,2})(:\d{2})? (A|P)M", part):
         hr = matches.group(1)
         ap = matches.group(3)
         if min := matches.group(2):
@@ -23,16 +23,16 @@ def conv_parts(part, am, pm):
         else:
             min = "00"
         if int(hr) <= 0 or int(hr) > 12:
-            raise ValueError("Invalid hr")
+            raise ValueError
         elif int(min) < 0 or int(min) > 59:
-            raise ValueError("Invalid min")
+            raise ValueError
         elif ap == "A":
             hr = am[hr]
         elif ap == "P":
             hr = pm[hr]
         return f"{hr}:{min}"
     else:
-        raise ValueError("no matches s")
+        raise ValueError
 
 
 if __name__ == "__main__":

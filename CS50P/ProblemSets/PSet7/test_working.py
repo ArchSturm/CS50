@@ -8,12 +8,12 @@ def test_convert_valid():
 
 def test_convert_invalid_format():
     l = ["9 to 5", "9 AM 5 PM", "9 AM - 5 PM", "9 AM", "9:30 PM - 5:30 AM", "nine to five"]
-    with pytest.raises(ValueError):
-        for s in l:
+    for s in l:    
+        with pytest.raises(ValueError):
             convert(s)
 
 def test_convert_invalid_time():
     l = ["-1 AM to 5 PM", "13 AM to 5 PM", "9 AM to 60 PM", "9 AM to 5:60 PM"]
-    with pytest.raises(ValueError):
-        for s in l:
+    for s in l:    
+        with pytest.raises(ValueError):
             convert(s)
