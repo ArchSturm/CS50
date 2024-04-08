@@ -22,7 +22,7 @@ class Jar:
     @property
     def capacity(self):
         return self._capacity
-    
+
     @capacity.setter
     def capacity(self, capacity):
         if capacity < 0:
@@ -32,17 +32,19 @@ class Jar:
     @property
     def size(self):
         return self._size
-    
+
     @size.setter
     def size(self, size):
         if size < 0:
             raise ValueError()
         self._size = size
-    
+
+
 def main():
     jar = Jar()
     jar.deposit(3)
     print(jar)
-    
+
+
 if __name__ == "__main__":
     main()
