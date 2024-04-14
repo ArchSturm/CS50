@@ -14,5 +14,8 @@ def is_gryffindor(s):
 
 gryffindors = filter(is_gryffindor, students)
 
+# teste = filter(is_gryffindor, students)
+# print(*teste)
+
 for gryffindor in sorted(gryffindors, key=lambda s: s["name"]):
     print(gryffindor["name"])
