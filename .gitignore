@@ -3,3 +3,5 @@ __pycache__
 .gitattributes
 .vscode
 .exe
+cs50.c
+cs50.h
