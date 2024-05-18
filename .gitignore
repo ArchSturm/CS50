@@ -2,6 +2,6 @@ __pycache__
 .pytest_cache
 .gitattributes
 .vscode
-.exe
+*.exe
 cs50.c
 cs50.h

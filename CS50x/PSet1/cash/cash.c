@@ -1,28 +1,35 @@
 #include "cs50.h"
 #include <stdio.h>
 
-int calculate_quarters(int cents);
+int calculate_coins(int cents);
 
 int main(void) {
-    // Prompt the user for change owed, in cents
     int cents;
+
     do {
         cents = get_int("Change owed: ");
     } while (cents < 0);
 
-    // Calculate how many quarters you should give customer
-    int quarters = calculate_quarters(cents);
-
-    // Subtract the value of those quarters from cents
-    cents = cents - (quarters * 25);
+    printf("%i", calculate_coins(cents));
 }
 
-int calculate_quarters(int cents) {
-    // Calculate how many quarters you should give customer
-    int quarters = 0;
-    while (cents >= 25) {
-        quarters++;
-        cents = cents - 25;
+int calculate_coins(int cents) {
+    int coins = 0;
+    int aux = 0;
+
+    if (cents >= 25) {
+        aux = cents / 25;
+        cents = cents - (aux * 25);
+        coins += aux;
     }
-    return quarters;
+    if (cents >= 10) {
+        aux = cents / 10;
+        cents = cents - (aux * 10);
+        coins += aux;
+    }
+    if (cents >= 5) {
+        ++coins;
+        cents -= 5;
+    }
+    return (coins + cents);
 }
