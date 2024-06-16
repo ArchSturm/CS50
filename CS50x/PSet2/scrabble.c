@@ -23,6 +23,7 @@ int main(void) {
     } else {
         printf("Tie!\n");
     }
+    return 0;
 }
 
 int compute_score(string word) {
