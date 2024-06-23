@@ -31,6 +31,7 @@ int main(int argc, string argv[]) {
         printf("%c", rotate(plaintext[i], key));
     }
     printf("\n");
+
     return 0;
 }
 
