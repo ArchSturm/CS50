@@ -1,0 +1,73 @@
+sort1 uses: Bubble sort
+
+How do you know?: It was very slow in reversed, but very fast at sorted
+
+sort2 uses: Merge sort
+
+How do you know?: both reversed and sorted had the same time, and it was faster than Selection sort
+
+sort3 uses: Selection sort
+
+How do you know?: It was the slowest and both reversed and sorted had the same time
+
+-------
+selection = O(n^2) omega(n^2)
+bubble = O(n^2) omega(n)
+merge = O(n log n) omega(n log n)
+
+-------
+sort1 reversed
+real    0m5,831s
+user    0m4,410s
+sys     0m0,264s
+
+real    0m5,503s
+user    0m4,448s
+sys     0m0,227s
+
+sort1 sorted
+real    0m0,951s
+user    0m0,007s
+sys     0m0,242s
+
+real    0m0,873s
+user    0m0,027s
+sys     0m0,238s
+
+-------
+sort2 reversed
+real    0m0,859s
+user    0m0,028s
+sys     0m0,234s
+
+real    0m0,984s
+user    0m0,035s
+sys     0m0,254s
+
+sort2 sorted
+real    0m0,857s
+user    0m0,016s
+sys     0m0,243s
+
+real    0m1,027s
+user    0m0,023s
+sys     0m0,221s
+
+-------
+sort3 reversed
+real    0m2,994s
+user    0m1,953s
+sys     0m0,224s
+
+real    0m3,032s
+user    0m1,982s
+sys     0m0,230s
+
+sort3 sorted
+real    0m2,974s
+user    0m1,932s
+sys     0m0,209s
+
+real    0m2,837s
+user    0m1,809s
+sys     0m0,267s
